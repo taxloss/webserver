@@ -1,0 +1,68 @@
+<head>
+
+ <script>
+    var like;
+	function display(p){
+	 if(p==1){
+	   like = '<img src="puma01.jpg" width="100" height="100" />';
+	 }
+	  if(p==2){
+	   like = '<img src="puma02.jpg" width="100" height="100" />';
+	 }
+	  if(p==3){
+	   like = '<img src="puma03.jpg" width="100" height="100" />';
+	 }
+	  if(p==4){
+	   like = '<img src="puma04.jpg" width="100" height="100" />';
+	 }
+	  if(p==5){
+	   like = '<img src="puma05.jpg" width="100" height="100" />';
+	 }
+	
+	}
+	
+	function Puma(){
+	var d = document.getElementById("duplicate");
+	var f = document.getElementById("print");
+	var out = "";
+	for(var i=0; i<d.value ;i++){
+	
+	out = out + like
+	
+	}
+	 
+	 f.innerHTML = out;
+	
+	
+	}
+  
+  </script>
+
+
+
+
+
+</head>
+<body style= "background-color:cyan">
+ <h1> <font color= "red"> Puma Messi</font></h1>
+ <input type="radio" name="g1" onchange="display(1)" />  
+   <img src="puma01.jpg" width="100" height="100" />
+ <input type="radio" name="g1" onchange="display(2)" />
+   <img src="puma02.jpg" width="100" height="100" />
+ <input type="radio" name="g1" onchange="display(3)"/>
+   <img src="puma03.jpg" width="100" height="100" />
+ <input type="radio" name="g1" onchange="display(4)"/>
+   <img src="puma04.jpg" width="100" height="100" />
+ <input type="radio" name="g1" onchange="display(5)" />
+   <img src="puma05.jpg" width="100" height="100" />
+   
+   <p></p>
+   How many Puma you want to print?
+   1<input type="range" min="1"  max="100" id="duplicate" >100
+   <p></p>
+   <button = onclick="Puma()">PRINT</button>
+   <div id="print"></div>
+ 
+
+
+</body>

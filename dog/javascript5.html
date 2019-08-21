@@ -1,0 +1,79 @@
+<head>
+   <script>
+       // Global variable
+	   var selectedIcon;
+	   
+	   function show(p) {
+	      
+		  if(p==1) {
+		  
+		    selectedIcon = '<img src="corgi01.jpg" width="50" />';
+		  }
+		  
+		  if(p==2) {
+		  
+		    selectedIcon = '<img src="corgi02.jpg" width="50" />';
+		  }
+
+		  if(p==3) {
+		  
+		    selectedIcon = '<img src="corgi03.jpg" width="50" />';
+		  }
+		  
+	   }
+	   
+	   function printIcon() {
+	   
+	      var copy = document.getElementById("copy");
+		  
+		  var info = document.getElementById("info");
+		  
+		  var output = "";
+		  
+		  for(var i=0; i<copy.value; i++) {
+		  
+		     output += selectedIcon;		  
+		  }	  
+		  
+		  info.innerHTML = output;
+	   }
+	   
+   </script>
+</head>
+<body>
+   <h1>JavaScript Testing</h1>
+   
+   <input type="radio" name="g1" onchange="show(1)" />  
+   <img src="corgi01.jpg" width="50" />
+   
+   <input type="radio" name="g1" onchange="show(2)"/>  
+   <img src="corgi02.jpg" width="50" />
+   
+   <input type="radio" name="g1" onchange="show(3)"/>  
+   <img src="corgi03.jpg" width="50" />
+   
+   <p></p>
+   
+   Number of Copies:
+   1<input type="range" min="1" max="100" id="copy" />100
+   
+   <p></p>
+   
+   <button onclick="printIcon()">Print</button>
+   
+   <div id="info"></div>
+   
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+

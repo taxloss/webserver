@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VueJs Tutorials</title>
+    <link  rel="stylesheet" a href="css/styles.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+  <body>
+    <div id="vue-app">
+        <h2>Event</h2>
+          
+       
+        <button v-on:click.once="add(1)">Add a Year Only Once</button>
+        <button @click="age++">Plus a Year</button>
+        <button v-on:click="subtract(1)">Subtract a Year</button>
+        <button @click="age--">Minus a Year</button>
+        <button @dblclick="add(10)">Add 10 Year</button>
+        <button v-on:dblclick="subtract(10)">Subtract 10 Year</button><br>
+        <a v-on:click.prevent="click" href="http://thenetninja.co.uk">Cannot to:The Net Ninja</a><br>
+        <a v-on:click="click" href="http://thenetninja.co.uk">OK to: The Net Ninja</a>
+        <p>My age is {{age}}</p>
+        <div id="canvas" @mousemove="updateXY">{{x}},{{y}}</div>
+         
+      </div>
+     <script src="app5.js"></script>
+      
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+  <head>
+    
+
+  </head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $( "li" ).hover(
+      function() {
+        $( this ).append($("<span>***</span>"));
+      },function() {
+        $( this ).find( "span:last" ).remove();
+      }
+    );
+  });
+ </script>
+
+<nav>
+   <ul>
+     <li><a href="/">Back to Home</a></li><br>
+     <li><a href="/Beagle">To Beagle</a></li><br>
+     <li><a href="/CorgiMain">To Corgi</a></li><br>
+     <li><a href="/contact">Contact Us</a></li><br>
+    </ul>
+</nav>
+</html>
